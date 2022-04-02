@@ -1,0 +1,3 @@
+C:/Users/lijh/Desktop/AVLTree/cmake-build-debug/CMakeFiles/AVLTree.dir
+C:/Users/lijh/Desktop/AVLTree/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lijh/Desktop/AVLTree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
