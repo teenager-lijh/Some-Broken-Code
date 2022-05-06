@@ -1,5 +1,7 @@
 package com.imooc.bigdata.hadoop.hdfs;
 
+import com.imooc.bigdata.hadoop.hdfs.utils.ImoocContext;
+
 public interface ImoocMapper {
     /**
      *

@@ -1,4 +1,4 @@
-package com.imooc.bigdata.hadoop.hdfs;
+package com.imooc.bigdata.hadoop.hdfs.utils;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -11,7 +11,8 @@ public class ParamsUtils {
 
     static {
         try {
-            properties.load(ParamsUtils.class.getClassLoader().getResourceAsStream("wc.properties"));
+             properties.load(ParamsUtils.class.getClassLoader().getResourceAsStream("wc.properties"));
+//            properties.load(ParamsUtils.class.getResourceAsStream("/wc.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -22,7 +23,7 @@ public class ParamsUtils {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(getProperties().getProperty("INPUT_PATH"));
+        System.out.println(getProperties().getProperty("USER"));
     }
 
 }

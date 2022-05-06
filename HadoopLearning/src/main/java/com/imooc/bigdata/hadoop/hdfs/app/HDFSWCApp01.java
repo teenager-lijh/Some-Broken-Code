@@ -1,14 +1,14 @@
-package com.imooc.bigdata.hadoop.hdfs;
+package com.imooc.bigdata.hadoop.hdfs.app;
 
 
+import com.imooc.bigdata.hadoop.hdfs.utils.WordCountMapper;
+import com.imooc.bigdata.hadoop.hdfs.utils.ImoocContext;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URI;
-import java.nio.Buffer;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -21,11 +21,13 @@ import java.util.Set;
 public class HDFSWCApp01 {
 
     public static void main(String[] args) throws Exception{
+
 //        1) 读取 HDFS 上的文件 ==> HDFS API
-        Path input = new Path("/hdfsapi/test/hellokk.txt");
+        Path input = new Path("/hello.txt");
 
 //        获取要操作的 HDFS 文件系统
-        FileSystem fs = FileSystem.get(new URI("hdfs://hadoop000:8020"), new Configuration(), "hadoop");
+        FileSystem fs = FileSystem.get(new URI("hdfs://hadoop000:8020"), new Configuration(), "lijh");
+
         RemoteIterator<LocatedFileStatus> iterator= fs.listFiles(input, false);
 
         WordCountMapper mapper = new WordCountMapper();
@@ -54,15 +56,19 @@ public class HDFSWCApp01 {
 
 //      4) 将结果输出到 HDFS ==> HDFS API
         Path output = new Path("/hdfsapi/output/hello.txt");
+        // 创建一个文件
         FSDataOutputStream out = fs.create(output);
 
         // TODO... 将第三步缓存中的内容输出到 out 中去
         Set<Map.Entry<Object, Object>> entries = contextMap.entrySet();
+
         for(Map.Entry<Object, Object> entry : entries) {
+            // 把缓存中的内容写到 HDFS 的文件中
             out.write((entry.getKey().toString() + "\t" + entry.getValue() + "\n").getBytes());
 
         }
 
+        // 释放资源
         out.close();
         fs.close();
 

@@ -1,4 +1,4 @@
-package com.imooc.bigdata.hadoop.hdfs;
+package com.imooc.bigdata.hadoop.hdfs.utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +15,8 @@ public class ImoocContext {
         return cacheMap;
 
     }
+
+    // 写缓存
     public void write(Object key, Object value) {
         cacheMap.put(key, value);
     }

@@ -1,15 +1,16 @@
-package com.imooc.bigdata.hadoop.hdfs;
+package com.imooc.bigdata.hadoop.hdfs.app;
 
 
+import com.imooc.bigdata.hadoop.hdfs.Constants;
+import com.imooc.bigdata.hadoop.hdfs.utils.ImoocContext;
+import com.imooc.bigdata.hadoop.hdfs.utils.ParamsUtils;
+import com.imooc.bigdata.hadoop.hdfs.utils.WordCountMapper;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
-import org.apache.hadoop.yarn.webapp.Params;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URI;
-import java.nio.Buffer;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
@@ -32,20 +33,21 @@ public class HDFSWCApp02 {
         Path input = new Path(properties.getProperty(Constants.INPUT_PATH));
 
 //        获取要操作的 HDFS 文件系统
-        FileSystem fs = FileSystem.get(new URI(properties.getProperty(Constants.HDFS_URI)), new Configuration(), "hadoop");
+        FileSystem fs = FileSystem.get(new URI(properties.getProperty(Constants.HDFS_URI)), new Configuration(), properties.getProperty(Constants.USER));
         RemoteIterator<LocatedFileStatus> iterator= fs.listFiles(input, false);
 
-        WordCountMapper mapper = new WordCountMapper();
-        ImoocContext context = new ImoocContext();
+        WordCountMapper mapper = new WordCountMapper(); // 用来写缓存
+        ImoocContext context = new ImoocContext(); // 缓存对象
 
         while(iterator.hasNext()) {
+            // 遍历输入路径下的所有文件
             LocatedFileStatus file = iterator.next();
             FSDataInputStream in = fs.open(file.getPath());
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 
             String line = "";
             while((line = reader.readLine()) != null) {
-//              2) 业务处理
+//              2) 业务处理 ==> 处理单个文件
                 // TODO... 在业务逻辑完成后将结果写到Cache中去
                 mapper.map(line, context);
             }

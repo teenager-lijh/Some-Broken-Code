@@ -1,4 +1,4 @@
-package com.imooc.bigdata.hadoop.hdfs;
+package com.imooc.bigdata.hadoop.hdfs.app;
 
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.conf.Configuration;
@@ -16,11 +16,12 @@ import java.net.URI;
  * Hello world!
  *
  */
-public class App 
+public class HDFSApp
 {
     public static final String HDFS_PATH = "hdfs://hadoop000:8020";
     Configuration configuration = null;
     FileSystem fileSystem = null;
+
 
 
     @Before
@@ -33,8 +34,8 @@ public class App
          */
         System.out.println("-------setUp------");
         configuration = new Configuration();
-        configuration.set("dfs.replication", "1");
-        fileSystem = FileSystem.get(new URI(HDFS_PATH), configuration, "hadoop");
+        configuration.set("dfs.replication", "2");
+        fileSystem = FileSystem.get(new URI(HDFS_PATH), configuration, "lijh");
     }
 
     @Test
@@ -42,7 +43,8 @@ public class App
         /**
          * 在 HDFS 中创建文件夹的 API
          */
-        fileSystem.mkdirs(new Path("hdfsapi/hello"));
+        boolean result = fileSystem.mkdirs(new Path("/hdfsapi/hello111/"));
+        System.out.println(result);
     }
 
     @Test
@@ -54,6 +56,7 @@ public class App
         FSDataInputStream in = fileSystem.open(new Path("/hdfsapi/output/hellokk.txt"));
         IOUtils.copyBytes(in, System.out, 1024);
 
+
     }
 
     @Test
@@ -62,7 +65,7 @@ public class App
          * 创建文件并添加到 HDFS 中
          */
 
-        FSDataOutputStream out = fileSystem.create(new Path("/hdfsapi/test/b.txt"));
+        FSDataOutputStream out = fileSystem.create(new Path("/hdfsapi/b.txt"));
         out.writeUTF("hello world. \n");
         out.flush();
         out.close();
@@ -109,6 +112,8 @@ public class App
         fileSystem.copyFromLocalFile(src, dst);
     }
 
+
+
     @Test
     public void copyToLocalFile() throws Exception {
         /**
@@ -117,7 +122,7 @@ public class App
          */
 
         Path dst = new Path("C:\\Users\\lijh\\Desktop");
-        Path src = new Path("/hdfsapi/test/hello.txt");
+        Path src = new Path("/hdfsapi/b.txt");
 
         // 空指针错误
 //        fileSystem.copyToLocalFile(src, dst);
@@ -130,7 +135,8 @@ public class App
         /**
          * 列出 HDFS 文件系统中的文件信息
          */
-        Path path = new Path("/hdfsapi/test/hello.txt");
+        Path path = new Path("/");
+        // fileStatuses 中的每个元素都是一个文件的 描述信息
         FileStatus[] fileStatuses = fileSystem.listStatus(path);
 
         for(FileStatus file : fileStatuses){
@@ -171,7 +177,7 @@ public class App
 
     @Test
     public void getFileBlockLocations() throws Exception {
-        Path path= new Path("/hdfsapi/test/hello.txt");
+        Path path= new Path("/jdk-8u91-linux-x64.tar.gz");
         FileStatus fileStatus = fileSystem.getFileStatus(path);
         BlockLocation[] blocks = fileSystem.getFileBlockLocations(fileStatus, 0, fileStatus.getLen());
 
@@ -200,16 +206,16 @@ public class App
         System.out.println("------tearDown------");
     }
 
-//    public static void main( String[] args ) throws Exception
-//    {
-//        Configuration configuration = new Configuration();
-//        FileSystem fileSystem = FileSystem.get(new URI("hdfs://hadoop000:8020"),configuration, "hadoop");
-//
-//        Path path = new Path("/hdfsapi/test");
-//
-//        boolean result = fileSystem.mkdirs(path);
-//
-//        System.out.println("result : " + result);
-//
-//    }
+    public static void main(String[] args) throws Exception
+    {
+        Configuration configuration = new Configuration();
+        FileSystem fileSystem = FileSystem.get(new URI("hdfs://192.168.180.130:8020"),configuration, "lijh");
+
+        Path path = new Path("/hdfsapi/test");
+
+        boolean result = fileSystem.mkdirs(path);
+
+        System.out.println("result : " + result);
+
+    }
 }
