@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed96d122-2cd3-45f5-a986-154871e2e64c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSWCApp03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/utils/CaseIgnoreWordCountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/.idea/PythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/download_data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/main.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/tools/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Steel-Big-Data/Single-And-Ore-Prediction/tools/reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountReducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/HDFSWCApp01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSWCApp01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/HDFSWCApp02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSWCApp02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/ImoocContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/utils/ImoocContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/ImoocMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/ImoocMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/ParamsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/utils/ParamsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/WordCountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/utils/WordCountMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/wc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/wc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Steel-Big-Data/Single-Ore-And-Mixed-Ore.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSWCApp03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSWCApp03.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +65,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -93,16 +73,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Library\Some-Broken-Code\HadoopLearning\src\main\java\com\imooc\bigdata\hadoop\mr\wc" />
+      <recent name="D:\Library\Some-Broken-Code\HadoopLearning\src\main\resources" />
       <recent name="D:\Library\Some-Broken-Code\HadoopLearning\src\main\java\com\imooc\bigdata\hadoop\hdfs\utils" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.imooc.bigdata.hadoop.hdfs" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.imooc.bigdata.hadoop.mr.wc" />
       <recent name="com.imooc.bigdata.hadoop.hdfs.app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HDFSWCApp03">
+  <component name="RunManager" selected="Application.WordCountApp">
     <configuration name="HDFSWCApp01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.imooc.bigdata.hadoop.hdfs.app.HDFSWCApp01" />
       <module name="HadoopLearning" />
@@ -155,29 +138,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HDFSApp.getFileBlockLocations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordCountApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.imooc.bigdata.hadoop.mr.wc.WordCountApp" />
       <module name="HadoopLearning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.imooc.bigdata.hadoop.hdfs.app.*" />
+          <option name="PATTERN" value="com.imooc.bigdata.hadoop.mr.wc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.imooc.bigdata.hadoop.hdfs.app" />
-      <option name="MAIN_CLASS_NAME" value="com.imooc.bigdata.hadoop.hdfs.app.HDFSApp" />
-      <option name="METHOD_NAME" value="getFileBlockLocations" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WordCountApp" />
         <item itemvalue="Application.HDFSWCApp03" />
         <item itemvalue="Application.HDFSWCApp02" />
         <item itemvalue="Application.ParamsUtils" />
         <item itemvalue="Application.HDFSWCApp01" />
-        <item itemvalue="JUnit.HDFSApp.getFileBlockLocations" />
       </list>
     </recent_temporary>
   </component>
@@ -217,6 +197,7 @@
       <workItem from="1651391603780" duration="1458000" />
       <workItem from="1651412277438" duration="18687000" />
       <workItem from="1651636030959" duration="14814000" />
+      <workItem from="1651855566255" duration="3642000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,7 @@ import com.imooc.bigdata.hadoop.hdfs.utils.ParamsUtils;
 import com.imooc.bigdata.hadoop.hdfs.utils.WordCountMapper;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
+import org.apache.hadoop.mapred.InputFormat;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -84,5 +85,9 @@ public class HDFSWCApp03 {
 
         System.out.println("完成了词频统计 Lijh");
 
+
+
     }
+
+
 }
