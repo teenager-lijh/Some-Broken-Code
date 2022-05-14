@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed96d122-2cd3-45f5-a986-154871e2e64c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input/wc.input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountLocalApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSWCApp03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/hdfs/app/HDFSWCApp03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,9 @@
     <option name="vmOptions" value="-Darchetype=Internal" />
   </component>
   <component name="ProjectId" id="1n1hocvp85UFsBvqME01Xd02JvK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,16 +66,17 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/input" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Library\Some-Broken-Code\HadoopLearning\src\main\java\com\imooc\bigdata\hadoop\mr\wc" />
+      <recent name="D:\Library\Some-Broken-Code\HadoopLearning\input" />
       <recent name="D:\Library\Some-Broken-Code\HadoopLearning\src\main\resources" />
+      <recent name="D:\Library\Some-Broken-Code\HadoopLearning\src\main\java\com\imooc\bigdata\hadoop\mr\wc" />
       <recent name="D:\Library\Some-Broken-Code\HadoopLearning\src\main\java\com\imooc\bigdata\hadoop\hdfs\utils" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -86,19 +88,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.WordCountApp">
-    <configuration name="HDFSWCApp01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.imooc.bigdata.hadoop.hdfs.app.HDFSWCApp01" />
-      <module name="HadoopLearning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.imooc.bigdata.hadoop.hdfs.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HDFSWCApp02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.imooc.bigdata.hadoop.hdfs.app.HDFSWCApp02" />
       <module name="HadoopLearning" />
@@ -151,13 +140,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordCountLocalApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.imooc.bigdata.hadoop.mr.wc.WordCountLocalApp" />
+      <module name="HadoopLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.bigdata.hadoop.mr.wc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.WordCountApp" />
+        <item itemvalue="Application.WordCountLocalApp" />
         <item itemvalue="Application.HDFSWCApp03" />
         <item itemvalue="Application.HDFSWCApp02" />
         <item itemvalue="Application.ParamsUtils" />
-        <item itemvalue="Application.HDFSWCApp01" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +199,7 @@
       <workItem from="1651391603780" duration="1458000" />
       <workItem from="1651412277438" duration="18687000" />
       <workItem from="1651636030959" duration="14814000" />
-      <workItem from="1651855566255" duration="3642000" />
+      <workItem from="1651855566255" duration="9965000" />
     </task>
     <servers />
   </component>
@@ -227,6 +229,16 @@
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountMapper.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/bigdata/hadoop/mr/wc/WordCountMapper.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
